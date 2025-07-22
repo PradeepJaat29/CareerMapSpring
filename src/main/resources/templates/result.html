@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Career Map Result</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <style>
+        body {
+            background-color: #0b0c10;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #66fcf1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100vh;
+            padding: 2rem;
+            background-image: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            background-size: 400% 400%;
+            animation: neonBG 10s ease infinite;
+        }
+
+        @keyframes neonBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            border: 2px solid #45a29e;
+            border-radius: 15px;
+            padding: 2rem;
+            width: 90%;
+            max-width: 800px;
+            background-color: rgba(10, 10, 20, 0.7);
+            box-shadow: 0 0 20px #45a29e;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1, h2 {
+            color: #66fcf1;
+            text-shadow: 0 0 5px #45a29e;
+            text-align: center;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            padding: 0.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-left: 4px solid #45a29e;
+            transition: all 0.3s ease-in-out;
+        }
+
+        li:hover {
+            background: rgba(102, 252, 241, 0.1);
+            transform: translateX(5px);
+        }
+
+        .download-btn {
+            margin-top: 20px;
+            display: inline-block;
+            padding: 12px 24px;
+            color: #0b0c10;
+            background-color: #66fcf1;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 0 10px #66fcf1;
+            transition: all 0.3s ease;
+        }
+
+        .download-btn:hover {
+            background-color: #45a29e;
+            box-shadow: 0 0 20px #45a29e;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🚀 Career Roadmap Generated</h1>
+
+    <h2 th:text="'Hello, ' + ${name} + '!'"></h2>
+    <p><strong>Your suggested career:</strong> <span th:text="${career}"></span></p>
+    <p><strong>Your goal:</strong> <span th:text="${goal}"></span></p>
+
+    <h2>Recommended Resources</h2>
+    <ul>
+        <li th:each="res : ${resources}" th:text="'🔹 ' + ${res}"></li>
+    </ul>
+
+    <a th:href="@{/download}" class="download-btn">📥 Download Roadmap</a>
+</div>
+
+</body>
+</html>

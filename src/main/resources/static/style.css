@@ -1,0 +1,93 @@
+body.neon-ui {
+    margin: 0;
+    padding: 0;
+    background-color: #0f0f0f;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #00ffff;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.neon-grid {
+    display: grid;
+    place-items: center;
+    height: 100%;
+    background: repeating-linear-gradient(
+        0deg,
+        #111 0px,
+        #111 1px,
+        #0f0f0f 1px,
+        #0f0f0f 20px
+    ), 
+    repeating-linear-gradient(
+        90deg,
+        #111 0px,
+        #111 1px,
+        #0f0f0f 1px,
+        #0f0f0f 20px
+    );
+    animation: grid-glow 6s infinite alternate;
+}
+
+@keyframes grid-glow {
+    0% {
+        filter: drop-shadow(0 0 1px #00ffff);
+    }
+    100% {
+        filter: drop-shadow(0 0 5px #00ffff);
+    }
+}
+
+.form-container {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border: 2px solid #00ffff99;
+    border-radius: 12px;
+    box-shadow: 0 0 20px #00ffff88;
+    text-align: center;
+    width: 400px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #00ffff;
+    text-shadow: 0 0 5px #00ffff;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #00ffffaa;
+    background: #111;
+    color: #00ffff;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+
+input[type="text"]::placeholder {
+    color: #00ffffaa;
+    opacity: 1;
+}
+
+input[type="text"]:focus {
+    box-shadow: 0 0 8px #00ffffcc;
+}
+
+input[type="submit"] {
+    padding: 12px 20px;
+    font-size: 16px;
+    background: #00ffff33;
+    border: 1px solid #00ffffaa;
+    border-radius: 6px;
+    color: #00ffff;
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background: #00ffff55;
+    box-shadow: 0 0 10px #00ffff88;
+}

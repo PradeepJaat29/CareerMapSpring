@@ -1,0 +1,9 @@
+Career Roadmap for: pradeep
+Suggested Career: Software Engineer
+Goal: software
+
+Recommended Resources:
+- Learn Java or Python from freeCodeCamp
+- Build 2–3 projects on GitHub
+- Read 'Clean Code' by Robert C. Martin
+- Practice DSA on LeetCode
