@@ -38,19 +38,19 @@ A futuristic, intuitive Spring Boot web application that suggests tailored caree
 
 ## 📁 Folder Structure
 
-├── src
-│   ├── main
-│   │   ├── java/com/career/map
-│   │   │   ├── controller/CareerController.java
-│   │   │   ├── model/CareerInput.java
-│   │   │   ├── service/CareerSuggester.java
-│   │   │   ├── util/ResourceLoader.java
-│   │   │   └── utils/RoadmapExporter.java
-│   │   └── resources
-│   │       ├── templates (Thymeleaf views)
-│   │       ├── static/css/style.css
-│   │       └── application.properties
-├── roadmap.txt (generated)
+├── src<br>
+│   ├── main<br>
+│   │   ├── java/com/career/map<br>
+│   │   │   ├── controller/CareerController.java<br>
+│   │   │   ├── model/CareerInput.java<br>
+│   │   │   ├── service/CareerSuggester.java<br>
+│   │   │   ├── util/ResourceLoader.java<br>
+│   │   │   └── utils/RoadmapExporter.java<br>
+│   │   └── resources<br>
+│   │       ├── templates (Thymeleaf views)<br>
+│   │       ├── static/css/style.css<br>
+│   │       └── application.properties<br>
+├── roadmap.txt (generated)<br>
 ├── pom.xml
 
 ---
